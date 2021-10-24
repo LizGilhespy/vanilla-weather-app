@@ -56,6 +56,13 @@ li.first-letter {
   margin-bottom: 20px;
 }
 
+.current-temp {
+  color: #000;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+}
+
 .current-temp-icon img {
   margin-right: 20px;
   height: 64px;
@@ -68,9 +75,11 @@ li.first-letter {
   top: -34px;
 }
 
-.current-temp {
+.current-temp-icon .active {
   color: #000;
-  font-size: 64px;
-  font-weight: 500;
-  line-height: 1;
+  cursor: default;
+}
+
+.current-temp-icon .active.hover {
+  text-decoration: none;
 }

@@ -27,8 +27,9 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
+  celsius = response.data.main.temp;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(celsius);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
   let currentConditions = document.querySelector("#current-weather-condition");
@@ -59,7 +60,32 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function convertFahrenheitTemp(event) {
+  event.preventDefault();
+  celsiusTemp.classList.remove("active");
+  fahrenheitTemp.classList.add("active");
+  let fahrenheitTemperature = (celsius * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function convertCelsiusTemp(event) {
+  event.preventDefault();
+  fahrenheitTemp.classList.remove("active");
+  celsiusTemp.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsius);
+}
+
+let celsius = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitTemp = document.querySelector("#fahrenheit-temp");
+fahrenheitTemp.addEventListener("click", convertFahrenheitTemp);
+
+let celsiusTemp = document.querySelector("#celsius-temp");
+celsiusTemp.addEventListener("click", convertCelsiusTemp);
 
 search("London");
