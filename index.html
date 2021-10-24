@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>;
     />
 
     <title>Weather App</title>
@@ -30,10 +31,10 @@
           <div class="overview">
           <h1>Weather App</h1>
           <br />
-          <h2>London</h2>
+          <h2 id="city"></h2>
           <ul>
             <li>Monday 07:00</li>
-            <li>Cloudy</li>
+            <li id="current-weather-condition"></li>
             </div>
           </ul>
           <div class="row">
@@ -44,14 +45,13 @@
                   alt="Partly cloudy"
                   class="float-left"
                 />
-                <strong class="current-temp">12</strong><span class="units">°c | <a href="#">°f</a></span>
+                <strong class="current-temp" id="temperature"></strong><span class="units">°c | <a href="#">°f</a></span>
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Precipitation: 5%</li>
-                <li>Humidity: 87%</li>
-                <li>Wind speed: 5km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind speed: <span id="wind-speed"></span>km/h</li>
               </ul>
             </div>
           </div>
