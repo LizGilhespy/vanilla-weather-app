@@ -1,0 +1,46 @@
+.weather-border {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(62, 133, 238) 1.1%,
+    rgb(227, 137, 240) 43.7%,
+    rgb(243, 193, 124) 89.7%
+  );
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  color: #000;
+  font-size: 24px;
+  text-align: center;
+  line-height: 28px;
+}
+
+h2 {
+  font-weight: 900;
+  color: #000;
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
