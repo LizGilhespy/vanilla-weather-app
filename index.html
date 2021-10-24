@@ -25,28 +25,35 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-border">
-        <h1>Weather App</h1>
-        <br />
-        <h2>London</h2>
-        <ul>
-          <li>Monday 07:00</li>
-          <li>Cloudy</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Partly cloudy"
-            />
-            12°c | °f
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Precipitation: 5%</li>
-              <li>Humidity: 87%</li>
-              <li>Wind speed: 5km/h</li>
-            </ul>
+      <div class="app-wrapper">
+        <div class="weather-border">
+          <div class="overview">
+          <h1>Weather App</h1>
+          <br />
+          <h2>London</h2>
+          <ul>
+            <li>Monday 07:00</li>
+            <li>Cloudy</li>
+            </div>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix current-temp-icon">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="Partly cloudy"
+                  class="float-left"
+                />
+                <strong class="current-temp">12</strong><span class="units">°c | <a href="#">°f</a></span>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: 5%</li>
+                <li>Humidity: 87%</li>
+                <li>Wind speed: 5km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small
