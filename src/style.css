@@ -30,6 +30,9 @@ li {
   font-size: 18px;
   margin: 0;
   padding: 0;
+}
+
+li.first-letter {
   text-transform: capitalize;
 }
 
