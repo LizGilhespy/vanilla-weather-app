@@ -30,7 +30,10 @@
         <div class="weather-border">
           <div class="overview">
           <h1>Weather App</h1>
-          <br />
+          <form id="search-form" class="mb-3">
+            <input type="search" placeholder="Search city" id="city-input" />
+            <input type="submit" value="Search" class="btn btn-outline-light btn-sm w-25" autocomplete="off" />
+          </form>
           <h2 id="city"></h2>
           <ul>
             <li id="date"></li>

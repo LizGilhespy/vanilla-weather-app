@@ -17,8 +17,13 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
+  if (hours >= 12) {
+    var timeOfDay = "pm";
+  } else {
+    var timeOfDay = "am";
+  }
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes}${timeOfDay}`;
 }
 
 function displayTemperature(response) {
@@ -42,7 +47,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "be60748992fab0f5da8162563fb21245";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London,&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "be60748992fab0f5da8162563fb21245";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("London");
