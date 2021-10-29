@@ -94,3 +94,21 @@ li:first-letter {
   font-weight: 500;
   line-height: 1;
 }
+
+.future-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.weather-date {
+  font-size: 16px;
+}
+
+.weather-temp {
+  font-size: 12px;
+}
+
+.weather-temp-min {
+  opacity: 0.6;
+}
