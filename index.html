@@ -10,17 +10,18 @@
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
-      <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>;
-    />
+    <script
+      src="https://kit.fontawesome.com/539b48bc49.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>Weather App</title>
   </head>
@@ -29,43 +30,53 @@
       <div class="app-wrapper">
         <div class="weather-border">
           <div class="overview">
-          <h1>Weather App</h1>
-          <form id="search-form" class="mb-3 center-block">
-            <input type="search" placeholder="Search city" id="city-input" />
-            <input type="submit" value="Go!" class="btn btn-outline-light btn-sm w-15" autocomplete="off" />
-          </form>
-          <div class="col-0">
-          <h2 id="city"></h2>
-          <ul>
-            <li id="date"></li>
-            <li id="current-weather-condition"></li>
+            <h1>Weather App</h1>
+            <div class="row">
+                <div class="col-8">
+                <form id="search-form">
+                  <input
+                    type="search"
+                    placeholder="Search city"
+                    id="city-input"
+                  /></div>
+                  <div class="col-2"><input
+                    type="submit"
+                    value="Go!"
+                    class="btn btn-outline-light btn-sm w-15"
+                    autocomplete="off"
+                  /></div>
+                    <div class="col-2">
+                <button id="my-location" class="btn">
+                  <i class="fas fa-map-marker-alt"></i>
+                </button></div>
+                </form>
+              
             </div>
-          </ul>
+            <h2 id="city"></h2>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="clearfix current-temp-icon">
-                <img
-                  src=""
-                  alt=""
-                  class="float-left weather-icon"
-                  id="icon"
-                />
+                <img src="" alt="" class="float-left weather-icon" id="icon" />
                 <strong class="current-temp" id="temperature"></strong>
                 <span class="units">
-                  <a href="#" id="celsius-temp" class="active">°c</a> | <a href="#" id="fahrenheit-temp">°f</a></span>
+                  <a href="#" id="celsius-temp" class="active">°c</a> |
+                  <a href="#" id="fahrenheit-temp">°f</a></span
+                >
               </div>
             </div>
             <div class="col-6">
               <ul>
+                <li id="date"></li>
+                <li id="current-weather-condition"></li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind speed: <span id="wind-speed"></span>km/h</li>
               </ul>
             </div>
           </div>
-          <div class="future-forecast" id="forecast">
-          </div>
+          <div class="future-forecast" id="forecast"></div>
         </div>
+
         <small
           ><a
             href="https://github.com/LizGilhespy/Weather-app-project"

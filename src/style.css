@@ -17,6 +17,12 @@ h2 {
   line-height: 40px;
   margin-left: 32px;
   margin-bottom: 0;
+  text-align: center;
+}
+
+#my-location {
+  display: inline-block;
+  background-color: #fff;
 }
 
 ul {
@@ -40,6 +46,7 @@ li:first-letter {
   text-align: center;
   margin: 15px;
   border-radius: 6px;
+  float: none;
 }
 
 .app-wrapper {
@@ -60,6 +67,12 @@ li:first-letter {
 
 .overview {
   margin-bottom: 20px;
+}
+
+.col-2 {
+  display: block;
+  align-items: center;
+  padding: 0px;
 }
 
 .current-temp-icon img {
