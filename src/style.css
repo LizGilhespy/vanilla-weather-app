@@ -82,9 +82,6 @@ li:first-letter {
 .current-temp-icon .active {
   color: #000;
   cursor: default;
-}
-
-.current-temp-icon .active:hover {
   text-decoration: none;
 }
 
