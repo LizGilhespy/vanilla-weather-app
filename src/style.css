@@ -17,12 +17,25 @@ h2 {
   line-height: 40px;
   margin-left: 32px;
   margin-bottom: 0;
-  text-align: center;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+#search-form {
+  display: block;
+  align-items: center;
+}
+
+.btn-sm {
+  font-size: 16px;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  margin-block-end: 20px;
 }
 
 #my-location {
-  display: inline-block;
   background-color: #fff;
+  margin-left: 28px;
 }
 
 ul {
