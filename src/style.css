@@ -45,7 +45,7 @@ ul {
 
 li {
   list-style: none;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -115,13 +115,14 @@ li:first-letter {
   color: #000;
   font-size: 64px;
   font-weight: 500;
-  line-height: 1;
+  top: -20px;
 }
 
 .future-forecast {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
   color: #000;
+  font-weight: 400;
 }
 
 .weather-date {
@@ -129,7 +130,7 @@ li:first-letter {
 }
 
 .weather-temp {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .weather-temp-min {
