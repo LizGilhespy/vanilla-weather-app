@@ -149,6 +149,7 @@ function pageData(response) {
   humidity.innerHTML = `${currentHumidity}`;
   temperature.innerHTML = `${currentTemperature}`;
   wind.innerHTML = `${windspeed}`;
+  getForecast(response.data.coord);
 }
 
 function myLocation(position) {
